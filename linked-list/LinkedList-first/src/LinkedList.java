@@ -82,7 +82,22 @@ public class LinkedList {
   }
 
   // ? Adding the element to the fist of the list
-  //? Point current 
-  public Node prepend (int value) {}
-  
+  //? If empty list -> pointe head and tail to the new node 
+  // ? Point the head to the new created node
+  // ? An move the pointers
+  public void prepend (int value) {
+    Node node = new Node(value);
+    if (length == 0) {
+      head = node;
+      tail = node;
+    } else {
+      node.next = head;
+      head = node;
+    }
+    length++;
+  }
+
+  public Npde removeFirst () {
+    
+  }
 }

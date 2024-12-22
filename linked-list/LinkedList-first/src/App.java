@@ -8,5 +8,9 @@ public class App {
         list.print();
         list.removeLast();
         list.print();
+        list.prepend(4);
+        list.prepend(2);
+        list.prepend(1);
+        list.print();
     }
 }
