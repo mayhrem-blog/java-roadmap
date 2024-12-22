@@ -97,7 +97,50 @@ public class LinkedList {
     length++;
   }
 
-  public Npde removeFirst () {
-    
+  // ? Check if the list is not empty -> return null
+  // ? Check if the list has one element -> point head and tail to null
+  //? Create temp pointer to head
+  // Create current and after pointers -> move head to after
+  // ? MOve head to after and set current.next as null
+  public Node removeFirst () {
+    if (length == 0) return null;
+    Node temp = head;
+    if (length == 1) {
+      head = null;
+      tail = null;
+    } else {
+      head = temp.next;
+      temp.next = null;
+    }
+    length--;
+    return temp;
   }
+
+  // !  get by index 
+  public int get (int index) {
+    if (index < 0 || index > length) return -1;
+    Node current = head;
+    for (int i = 0; i < index; i++) {
+      current = current.next;
+    }
+    return current.value;
+  } 
+
+  // !  set  
+  public void set (int index, int value) {
+    if (index < 0 || index > length) return;
+    Node current = head;
+    for (int i = 0; i < index; i++) {
+      current = current.next;
+    }
+    current.value = value;
+  }
+
+  // !  insert at position
+  public void insert (int index, int value) {
+
+  }
+  // !  remove element
+
+
 }

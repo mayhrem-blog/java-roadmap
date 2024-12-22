@@ -12,5 +12,10 @@ public class App {
         list.prepend(2);
         list.prepend(1);
         list.print();
+        list.removeFirst();
+        list.print();
+        System.out.println("Retrieving index 4 -> "+list.get(4));
+        list.set(4, 2);
+        list.print();
     }
 }
