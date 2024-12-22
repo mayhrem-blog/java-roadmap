@@ -138,7 +138,8 @@ public class LinkedList {
 
   // !  insert at position
   public void insert (int index, int value) {
-
+    Node node = new Node(value);
+    
   }
   // !  remove element
 
