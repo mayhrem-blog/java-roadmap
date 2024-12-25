@@ -48,7 +48,7 @@ public class Heap {
       int rightIndex = rightChild(index);
 
       if (leftIndex < heap.size() && heap.get(leftIndex) > heap.get(maxIndex)){
-        maxIndex = leftIndex;
+        maxIndex = leftIndex; 
       }
 
       if (rightIndex < heap.size() && heap.get(rightIndex) > heap.get(maxIndex)) {
